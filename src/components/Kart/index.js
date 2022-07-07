@@ -12,7 +12,7 @@ function Kart(){
         <>
          {
           kart.map((e,index)=>(
-            <Product key={index} name={e.name} price={e.price} img = {e.image} btn={'Remover'}></Product>
+            <Product key={index} name={e.name} price={e.price} image = {e.image} btn={'Remover'}></Product>
           ))
         }
         </>

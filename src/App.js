@@ -1,16 +1,21 @@
 import './App.css';
-import ProductList from './components/ProductList';
-import Kart from './components/Kart'
+import MainPage from './pages/MainPage'
+import KartPage from './pages/KartPage'
+import {Switch,Route} from 'react-router-dom'
 
 function App() {
   
   return (
-    <div className="App">
+    <Switch>
+      <Route path='/' exact>
+        <MainPage></MainPage>
+      </Route>
+      <Route path='/kart' exact>
         
-        <ProductList></ProductList>
-        <hr></hr>
-        <Kart></Kart>
-    </div>
+        <KartPage></KartPage>
+      </Route>
+    </Switch>
+    
   );
 }
 

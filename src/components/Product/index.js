@@ -1,26 +1,30 @@
 import {useDispatch} from 'react-redux'
+import { ProductContent } from './styled'
 
-function Product({name,price,img,btn}){
+function Product({name,price,image,btn}){
 
     const dispatch =useDispatch()
 
     const obj = {
         name:name,
         price:price,
-        image:img
+        image:image
     }
 
     return(
-        <>
-            <img src={img}/>
+    
+        <ProductContent>
+        
+            <img src={image}/>
             <span>{name}</span>
-            <h1>{price}</h1>
+            <h1>R${price},00</h1>
             {
-                btn=="Adicionar"?
+                btn==="Adicionar"?
                 <button onClick={(e)=>dispatch({ type: '@product/ADD',payload:obj})}>{btn}</button>:
                 <button onClick={(e)=>dispatch({ type: '@product/REMOVE',payload:name})}>{btn}</button>
             }
-        </>
+        </ProductContent>
+        
     )
 }
 

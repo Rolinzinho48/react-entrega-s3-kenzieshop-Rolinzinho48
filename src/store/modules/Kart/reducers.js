@@ -1,4 +1,4 @@
-import { ADD_PRODUCT,REMOVE_PRODUCT } from "./actionsType";
+import { ADD_PRODUCT,REMOVE_PRODUCT,GET_SUM } from "./actionsType";
 
 const Kart = (state=[],action)=>{
     switch(action.type){
@@ -9,6 +9,10 @@ const Kart = (state=[],action)=>{
                 return e.name !== action.payload
             })
             return arr
+        case GET_SUM:
+            let sum = 0
+            
+            return sum
 
         default:
             return state
