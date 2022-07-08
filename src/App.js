@@ -4,7 +4,7 @@ import KartPage from './pages/KartPage'
 import {Switch,Route} from 'react-router-dom'
 
 function App() {
-  
+  console.log("EU amo a raquel")
   return (
     <Switch>
       <Route path='/' exact>
